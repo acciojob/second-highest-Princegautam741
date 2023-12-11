@@ -1,7 +1,6 @@
-// The function to find the second-highest element
 function secondHighest(arr) {
-    // Check if the array is empty or has only one element
-    if (arr.length <= 1) {
+    // Check if the array is empty or has only 1 element
+    if (arr.length < 2) {
         return -Infinity;
     }
 
@@ -17,5 +16,17 @@ function secondHighest(arr) {
     return uniqueSortedArr[1];
 }
 
-// Export the function for testing
-module.exports = secondHighest;
+function Main() {
+    var n = prompt("Enter the number of elements");
+    var arr = [];
+    
+    // Convert input to integers and populate the array
+    for (var i = 0; i < n; i++) {
+        arr[i] = parseInt(prompt("Enter element " + (i + 1)), 10);
+    }
+
+    alert(secondHighest(arr));
+}
+
+// Call the Main function
+Main();
