@@ -2,41 +2,41 @@
 <html>
 
 <head>
-	<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
-<body>	
-	<script>
-		function secondHighest(arr) {
-			// Check if the array is empty or has only one element
-			if (arr.length <= 1) {
-				return -Infinity;
-			}
+<body>
+    <script>
+        function secondHighest(arr) {
+            // Check if the array is empty or has only one element
+            if (arr.length <= 1) {
+                return -Infinity;
+            }
 
-			// Remove duplicate elements and sort the array in descending order
-			const uniqueSortedArr = [...new Set(arr)].sort((a, b) => b - a);
+            // Remove duplicate elements and sort the array in descending order
+            const uniqueSortedArr = [...new Set(arr)].sort((a, b) => b - a);
 
-			// If all elements are the same, return -Infinity
-			if (uniqueSortedArr.length === 1) {
-				return -Infinity;
-			}
+            // If all elements are the same, return -Infinity
+            if (uniqueSortedArr.length === 1) {
+                return -Infinity;
+            }
 
-			// Return the second-highest element
-			return uniqueSortedArr[1];
-		}
+            // Return the second-highest element
+            return uniqueSortedArr[1];
+        }
 
-		function Main() {
-			var n = prompt("Enter the number of elements");
-			var arr = [];
-			for (var i = 0; i < n; i++) {
-				arr[i] = prompt("Enter element " + (i + 1));
-			}
-			alert(secondHighest(arr));
-		}
-		Main();
-	</script>
+        function Main() {
+            var n = prompt("Enter the number of elements");
+            var arr = [];
+            for (var i = 0; i < n; i++) {
+                arr[i] = parseInt(prompt("Enter element " + (i + 1))); // Parse input as integers
+            }
+            alert(secondHighest(arr));
+        }
+        Main();
+    </script>
 
-	<script type="text/javascript" src="./script.js"></script>
+    <script type="text/javascript" src="./script.js"></script>
 
 </body>
 
