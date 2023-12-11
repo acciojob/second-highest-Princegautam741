@@ -1,6 +1,5 @@
 // The function to find the second-highest element
 function secondHighest(arr) {
-    // Write your code here
     // Check if the array is empty or has only one element
     if (arr.length <= 1) {
         return -Infinity;
